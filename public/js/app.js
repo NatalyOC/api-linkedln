@@ -20,6 +20,7 @@ function ShowProfileData(profiles) {
   let photo = member.pictureUrl; 
   let headline = member.headline; 
   let locationName = member.location.name;
+  let email=member.emailAddress;
   let publicProfileUrl = member.publicProfileUrl;
   // Persistencia de Data
   localStorage.firstName = firstName;
@@ -28,6 +29,9 @@ function ShowProfileData(profiles) {
   localStorage.locationName = locationName;
   localStorage.headline = headline;
   localStorage.publicProfileUrl = publicProfileUrl;
+  localStorage.email=email;
   console.log(id, locationName); 
 }
- 
+function logout() {
+  IN.User.logout();
+}
