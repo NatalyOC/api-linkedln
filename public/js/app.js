@@ -6,7 +6,7 @@ function OnLinkedInFrameworkLoad() {
 function OnLinkedInAuth(e) {
   IN.API.Profile('me').fields('id', 'first-name', 'last-name', 'headline', 'location', 'picture-url', 'public-profile-url', 'email-address').result(ShowProfileData).error(onError);
   // e.preventDefault();
-  window.location.href = '../views/profile.html';
+  // window.location.href = '../views/profile.html';
 }
 function onError(error) {
   console.log(error);
@@ -20,7 +20,7 @@ function ShowProfileData(profiles) {
   let photo = member.pictureUrl; 
   let headline = member.headline; 
   let locationName = member.location.name;
-  let email=member.emailAddress;
+  let email = member.emailAddress;
   let publicProfileUrl = member.publicProfileUrl;
   // Persistencia de Data
   localStorage.firstName = firstName;
@@ -29,8 +29,15 @@ function ShowProfileData(profiles) {
   localStorage.locationName = locationName;
   localStorage.headline = headline;
   localStorage.publicProfileUrl = publicProfileUrl;
-  localStorage.email=email;
-  console.log(id, locationName); 
+  localStorage.email = email;
+  console.log(id, locationName);
+  
+  document.getElementById('name').innerHTML = localStorage.firstName + ' ' + localStorage.lastName;
+  document.getElementById('intro').innerHTML = localStorage.headline;
+  document.getElementById('email').innerHTML = localStorage.emailAddress;
+  document.getElementById('location').innerHTML = localStorage.locationName;
+  document.getElementById('link').innerHTML = '<a href="' + localStorage.publicProfileUrl + '" target="_blank">Visit profile</a>';
+  document.getElementById('profileData').style.display = 'block';
 }
 function logout() {
   IN.User.logout();
