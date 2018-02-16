@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,31 +9,66 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
   <link rel="stylesheet" href="../css/main.css">
-  <!--  <script type="text/javascript" src="//platform.linkedin.com/in.js">
-    api_key: 78u22wwib87ksj
-    authorize: true
-    /* onLoad: onLinkedInLoad */
-   
-  </script> -->
 </head>
-
-<body>
+<body class="color-link">
   <section id="main">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-xs12 col-md-9 col-lg-3 offset-lg-4  ">
           <!-- Muestra información del profile -->
           <div id="profileData">
             <p>
-              <a href="#">Logout</a>
+              <a href="#" id="c">Logout</a>
             </p>
             <div id="picture"></div>
             <div class="info">
-              <p id="name"></p>
-              <p id="intro"></p>
-              <p id="email"></p>
-              <p id="location"></p>
-              <p id="link"></p>
+              <!-- <p id="name"></p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row d-none">
+        <div class="col-xs-12 col-sm-12">
+          <!-- start profile section -->
+          <div class="card-profile-stats">
+            <div class="card-profile-stats-intro">
+              <img class="card-profile-stats-intro-pic" src="" width="210" height="290" alt="profile-image">
+              <div class="card-profile-stats-intro-content">
+                <h3 id="name">Micaela Bastidas</h3>
+                <p id="intro">Joined Jan. 11th 2017</small>
+                </p>
+                <p id="location"></p>
+              </div>
+            </div>
+            <hr>
+            <div class="card-profile-stats-container">
+              <div class="card-profile-stats-statistic">
+                <span class="stat ft-grey">1</span>
+                <p>Quién ha visto tu perfil</p>
+              </div>
+              <div class="card-profile-stats-statistic">
+                <span class="stat ft-grey">1</span>
+                <p>Visualización de publicaciones</p>
+              </div>
+              <!-- /.card-profile-stats-statistic -->
+              <div class="card-profile-stats-statistic">
+                <span class="stat ft-grey">2</span>
+                <p>Apariciones en busqueda</p>
+              </div>
+            </div>
+            <div class="card-profile-stats-more">
+              <p class="card-profile-stats-more-link">
+                <a href="#">
+                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </a>
+              </p>
+              <div class="card-profile-stats-more-content">
+                <h2>Description</h2>
+                <p>Hi everybody. I'm Micaela! I like to travel around world and do extreme sports</p>
+                <p id="intro"></p>
+                <p id="email"></p>
+                <p id="link"></p>
+              </div>
             </div>
           </div>
         </div>
