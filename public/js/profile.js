@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+// Toggle profile description
+$('.card-profile-stats-more-link').click(function(event) {
+  event.preventDefault();
+  if ($('.card-profile-stats-more-content').is(':hidden')) {
+    $('.card-profile-stats-more-link').find('i').removeClass('fa-angle-down').addClass('fa-angle-up');
+  } else {
+    $('.card-profile-stats-more-link').find('i').removeClass('fa-angle-up').addClass('fa-angle-down');
+  }
+  $(this).next('.card-profile-stats-more-content').slideToggle();
+});
+// use information captured above
+// alert('hi');
+// document.getElementById('picture').innerHTML = '<img src="' + localStorage.photo + '" />';
+document.getElementById('pic').setAttribute('src', localStorage.profilePhoto);
+document.getElementById('name').innerHTML = localStorage.fname + ' ' + localStorage.lname;
+document.getElementById('intro').innerHTML = localStorage.headline;
+document.getElementById('email').innerHTML = localStorage.email;
+document.getElementById('location').innerHTML = localStorage.locationName ;
+document.getElementById('link').innerHTML = '<a href="' + localStorage.publicProfileUrl + '" target="_blank">Visit profile</a>';
+=======
 // use information captured above
 // Funcion que detecta el evento para realizar una llamada a la API una vez se complete la autenticación
 function OnLinkedInFrameworkLoad() {
@@ -50,3 +71,4 @@ function logout() {
 
 document.getElementById('button-logout').addEventListener('click',logout);
  */
+>>>>>>> 33bfef65b46a837ba3795c9a09e12e566c4413d3
