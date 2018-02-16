@@ -16,7 +16,7 @@ function onLogout() {
  
 // Use the API call wrapper to request the member's basic profile data
 function getProfileData() {
-  IN.API.Profile('me').fields('id', 'first-name', 'last-name', 'headline', 'location', 'picture-url', 'public-profile-url', 'email-address').result(function(data) {
+  IN.API.Profile('me').fields('id', 'first-name', 'last-name', 'headline', 'location', 'picture-url', 'public-profile-url', 'email-address','specialties','positions').result(function(data) {
     console.log(data);
     let userdata = data.values[0];
     let id = userdata.id;
@@ -27,6 +27,9 @@ function getProfileData() {
     let headline = userdata.headline; 
     let locationName = userdata.location.name;
     let publicProfileUrl = userdata.publicProfileUrl;
+    let position = userdata.positions;
+    let special = userdata.specialties;
+    // console.log(position,special);
     logout();
     localStorage.id = id;
     localStorage.fname = fname;
